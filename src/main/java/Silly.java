@@ -87,9 +87,7 @@ public class Silly implements Comparable<Silly>{
      * @param first the first name of this Silly instance.
      * @param second the second name of this Silly instance.
      */
-    public Silly(String first, String second){
-        this.name = first + second;
-    }
+    public Silly(String first, String second){this.name = first + second;}
 
     public static void main(String[] args) {
         /**
@@ -164,15 +162,12 @@ public class Silly implements Comparable<Silly>{
         if (!(o instanceof Silly)){
             return false;
         }
-        else {
-            return true;
-        }
-        }
 
         Silly other = (Silly) o; // To access .name of o, we need to cast it.
 
         // Hint: to compare strings, we need to use .equals()
         //       e.g. s1.equals(s2)
+        return this.name == other.name;
     }
 
     /**
@@ -208,14 +203,8 @@ public class Silly implements Comparable<Silly>{
          */
          int name_len = this.name.length();
          int other_len = other.name.length();
-         if (name_len != other_len) {
-            return other_len - name_len;
-        }
-        else {
-            return 0;
-        }
-
-        }
+         return this_len - other_len;
+    }
 
 
     /*
