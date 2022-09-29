@@ -201,7 +201,7 @@ public class Silly implements Comparable<Silly>{
          *                You can get the length of a string by using the
          *                .length() method.
          */
-         int name_len = this.name.length();
+         int this_len = this.name.length();
          int other_len = other.name.length();
          return this_len - other_len;
     }
